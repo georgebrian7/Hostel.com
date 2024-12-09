@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+
+
+<!-- Section Title -->
+      <!-- Services Section -->
+    <section id="services" class="services section" >
+      <div class="container section-title" data-aos="fade-up">
+        <h2>ACCOMMODATION</h2>
+        <p>Hostels<br></p>
+      </div><!-- End Section Title -->
+
+      <div class=".container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="d-inline-block" >
+          {% for room in data %}
+          <div class="cols-xl-4 .col-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class= "d-inline-grid">
+              <div class="img">
+                <img src="{{ room.image.url}}" class="img-fluid" alt="" width="500px">
+                </div>
+                <div class="details position-relative" class="stretched-link">
+                    {% if user.is_authenticated %}
+                    <form action="{% url 'book_hostel' room.id %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-warning" >
+                            Book
+                        </button>
+                    </form>
+                 {% else %}
+                 <a href="{% url 'signup' %}" class="btn btn-primary">Sign up to book</a>
+                 {% endif %}
+                <h3>{{ room.name }} (Capacity: {{ room.capacity }})</h3>
+                <p>{{ room.description}}</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+         {% endfor %}
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+{% endblock %}

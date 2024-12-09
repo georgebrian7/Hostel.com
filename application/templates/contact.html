@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+
+   <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to contact Us</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>Kimathi street ,Nairobi PO Box 626-72626</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+254 566 666 253 </p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>hostels@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+    <h3>Contact form</h3>
+    {{ form3.as_p }}
+            <div class="d-grid">
+                 <button type="submit" class="btn btn-primary">SUBMIT</button>
+            </div>
+
+</form>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+{% endblock %}

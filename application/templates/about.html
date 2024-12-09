@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+
+<section id="team" class="team section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>welcome</h2>
+        <p>About Us</p>
+      </div>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3></h3>
+            <img src="{% static 'img/high-angle-woman-with-laptop-bed.jpg'%}" class="img-fluid rounded-4 mb-4" alt="">
+              <div class="content ps-0 ps-lg-5">
+            <p>Find Your Preferred Student Accommodation</p>
+            <p><bold>IN 3 SIMPLE STEPS</bold></p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>SIGN UP </span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>CHOOSE YOUR HOSTEL</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Click BOOK</span></li>
+              </ul>
+              </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p >
+                  "Discover comfortable and affordable student hostels near your university. Whether you’re looking for...
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>a shared room</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>a single unit</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>a luxury apartment</span></li>
+              </ul>
+              <p>
+                we’ve got you covered. Start your journey today!
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="{% static 'img/airbnb-host-welcoming-guests.jpg'%}" class="img-fluid rounded-4" alt="">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+</section>
+<!-- Section Title -->
+      <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>TOP RATED HOSTELS</h2>
+        <p>With a click of a button you could live in one of our award-winning hostels<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPLCQO6xd8Pn--C0H6zjc_qWlwwJst-js3qw&s" class="img-fluid" alt="" width="500px">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <a  class="stretched-link">
+                  <h3>Affordable Shared Room - Near Kenyatta University</h3>
+                </a>
+                <p>Location: Kahawa Sukari, Nairobi
+Price: From Ksh. 5,000/month
+Description: "Spacious shared rooms with 24/7 security, Wi-Fi, and a study desk. Perfect for group living!"
+Amenities: Free Wi-Fi, Laundry, Proximity to Public Transport</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQxE6iRmrM0etYQD6FbEm0OY4iUd2OnM56_A&s" class="img-fluid" alt="" width="500px">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>Private Studio Apartment - Moi University Area</h3>
+                </a>
+                <p>Location: Ngeria, Eldoret
+Price: From Ksh. 15,000/month
+Description: "Modern, private studio apartments for a quiet and comfortable stay."
+Amenities: Fully Furnished, Utilities Included, Secure Parking</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD9SmC9TpjGUl76ZLhQAo2iBuytc4ctTQSWQ&s" class="img-fluid" alt="" width="500px">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>Premium Single Room - Near University of Nairobi</h3>
+                </a>
+                <p>Location: Kilimani, Nairobi
+Price: From Ksh. 20,000/month
+Description: "Enjoy premium accommodation in Nairobi's safest and most serene environment."
+Amenities: High-Speed Internet, Gym Access, 24/7 Security</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+
+
+
+{% endblock %}

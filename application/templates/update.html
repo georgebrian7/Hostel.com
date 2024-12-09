@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+
+<section id="team" class="team section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>welcome</h2>
+        <p>My PROFILE</p>
+      </div>
+
+<div class="container-md">
+     <div class="container section-title" data-aos="fade-up">
+        <h2>welcome</h2>
+        <p>My PROFILE</p>
+      </div>
+    <form action="" method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+        {{ form.as_p }}
+     <button type="submit" class="btn btn-success">UPDATE</button>
+        <a href="" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+</section>
+{% endblock %}

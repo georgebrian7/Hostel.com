@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content  %}
+
+    
+   <!-- Team Section -->
+    <section id="team" class="team section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>welcome</h2>
+        <p>My PROFILE</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+
+              <div class="pic">
+                  {% if user.image %}
+                  <img src="{{ user.image.url}}" class="img-fluid" alt="" width="500px"></div>
+                 {% else %}
+                  <img src="{% static 'img/placeholder.jpg' %}" class="img-fluid" alt="No Image" style="width: 500px;  object-fit:cover ">
+                  {% endif %}
+                <div class="member-info">
+                <h4>{{ booking.user.first_name}}</h4>
+                <span>{{ user.university}}</span>
+                <button class="btn bg-success"><a href="{% url 'update_user'  %}" type="button">update</a></button>
+                <button class="btn btn-danger"><a href="{% url 'delete_user'  %}"  type="button" onclick="return confirm('Are you sure you want to delete this profile')">Delete</a></button>
+
+              </div>
+
+            </div>
+          </div><!-- End Team Member -->
+
+
+        <button class="btn-success"><a href="{% url 'profile_form'  %}" type="button"> Personal Information</a></button>
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+<div>
+<button><a href="{% url 'residence' %}">Property</a></button>
+</div>
+
+
+
+<!-- Section Title -->
+<section id="bookings" class="bookings section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>BOOKINGS</h2>
+    <p>Your current bookings are listed below.<br></p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-5">
+      {% if bookings.exists %}
+        {% for booking in bookings %}
+        <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="booking-item">
+            <div class="details position-relative">
+              <h3>Room: {{ booking.room.name }}</h3>
+              {% if booking.user %}
+              <p>Booked by: {{ booking.user.first_name }}</p>
+              {% else %}
+              <p>Booked by: Guest</p>
+              {% endif %}
+              <p>Room Capacity: {{ booking.room.capacity }}</p>
+              <p>Description: {{ booking.room.description }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      {% else %}
+        <p>No bookings found.</p>
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
