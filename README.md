@@ -122,4 +122,3 @@ Visit `http://localhost:8000` in your browser.
 
 
 
-**Note:** This is a development version. For production deployment, follow the security guidelines and deployment checklist above. Live payment integration and advanced features are not included in this version.
